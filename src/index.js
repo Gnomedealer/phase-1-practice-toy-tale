@@ -2,42 +2,41 @@ let addToy = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   const getToys = () => {
-    return fetch('http://localhost:3000/toys/')
+    fetch('http://localhost:3000/toys/')
     .then(dolls => dolls.json())
-    .then(toys => makeDiv(toys))
+    .then(toys => console.log(toys))
   }
-  const postToys = (name,imageUrl) => {}
+  //  const postToys = (name,imageUrl) => {}
 
 
 
 
 
 
-    fetch('http://localhost:3000/toys',
-    {
-      headers:{
-        'Content-type': 'application/json'
-         Accept: "application/json"
-      },
-      method: "POST"
-      body: JSON.stringify(
-        {
-        }
-      )
+  //   fetch('http://localhost:3000/toys',
+  //   {
+  //     headers:{
+  //       'Content-type': 'application/json',
+  //        Accept: "application/json"
+  //     },
+  //     method: "POST",
+  //     body: JSON.stringify(
+  //       {
+  //       }
+  //     )
 
 
 
-    })
-    .then()
-    .then()
-  }
+  //   })
+  //   .then()
+  //   .then()
+  // }
 
-  toyButton = document.getElemenyById('new-toy-btn')
-  toyButton.addEventListener('click', event => {
+ const toyButton = document.getElementById('new-toy-btn')
+ toyButton.addEventListener('click', event => {
+  
 
-
-  })
-
+  });
 
   function makeDiv(toys){
     const mainDiv = document.getElementById('toy-collection')
